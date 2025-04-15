@@ -27,14 +27,14 @@
           // enableInputMethods: true,
           // enableDebug: true, 
           tailscaleAuthKey: "tskey-auth-kHBWnT2mWA11CNTRL-YqeF3Wenpa41V18f6wEUa4xixkbRco9N",
-          // tailscaleIpCb: function (ip) {
-          //   console.log("IP address " + ip);
-          // },
+          tailscaleIpCb: function (ip) {
+            console.log("IP address " + ip);
+          },
         }
       );
       // cheerpjCreateDisplay(900, 800);
       cheerpjCreateDisplay(-1, -1, document.getElementById("container"));
-      await cheerpjRunJar("/app/jar/SwingHTMLBrowser.jar");
+      await cheerpjRunJar("/app/Test/jar/SwingHTMLBrowser.jar");
     </script>
   </body>
 </html>
