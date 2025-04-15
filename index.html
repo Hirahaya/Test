@@ -9,9 +9,21 @@
     <span>
       <script>
         (async function () {
-          await cheerpjInit();
+          await cheerpjInit(
+            {
+              // tailscaleControlUrl: "https://login.tailscale.com/",
+              // logCanvasUpdates: true,
+              clipboardMode: "permission",
+              enableInputMethods: true,
+              // enableDebug: true, 
+              // tailscaleAuthKey: "kYbQN37h9B11CNTRL",
+              // tailscaleIpCb: function (ip) {
+              //   console.log("IP address " + ip);
+              // },
+            }
+          );
           cheerpjCreateDisplay(900, 800);
-          await cheerpjRunJar("/app/Test/jar/SwingSet3.jar");
+          await cheerpjRunJar("/app/jar/SwingSet3.jar");
         })();
       </script>
     </span>
