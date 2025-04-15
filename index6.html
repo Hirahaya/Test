@@ -8,9 +8,11 @@
   <body>
     <script>
       (async function () {
-        await cheerpjInit({
-          tailscaleAuthKey: "kVE1ys4dvj11CNTRL",
-        });
+        await cheerpjInit(
+          // {
+          // tailscaleAuthKey: "kVE1ys4dvj11CNTRL",
+          // }
+        );
         cheerpjCreateDisplay(900, 800);
         await cheerpjRunJar("/app/Test/jar/SwingHTMLBrowser.jar");
       })();
