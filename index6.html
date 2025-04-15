@@ -2,16 +2,24 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>CheerpJ test</title>
+    <title>CheerpJ Browser</title>
     <script src="https://cjrtnc.leaningtech.com/3.1/cj3loader.js"></script>
   </head>
   <body>
     <script>
       (async function () {
         await cheerpjInit(
-          // {
-          // tailscaleAuthKey: "kVE1ys4dvj11CNTRL",
-          // }
+          {
+            // tailscaleControlUrl: "https://my.url.com/",
+            logCanvasUpdates: true,
+            clipboardMode: "permission",
+            enableInputMethods: true,
+            enableDebug: true, 
+            tailscaleAuthKey: "kYbQN37h9B11CNTRL",
+            tailscaleIpCb: function (ip) {
+              console.log("IP address " + ip);
+            },
+          }
         );
         cheerpjCreateDisplay(900, 800);
         await cheerpjRunJar("/app/Test/jar/SwingHTMLBrowser.jar");
