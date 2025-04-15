@@ -11,7 +11,7 @@
       (async function () {
         await cheerpjInit({
           enableInputMethods: true,
-          tailscaleAuthKey: "tskey-auth-ks6RaAPbb921CNTRL-vvnRbx6V4JXonFDFV3eeHXE83Un3UZRh",
+          tailscaleAuthKey: process.env.TAILSCALE_KEY,
           tailscaleIpCb: (ip) => {
             console.log("ip: " + ip);
             let el = document.querySelector("#ip");
