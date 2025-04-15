@@ -10,6 +10,7 @@
     <script>
       async function start(ip) {
         await cheerpjInit({
+          tailscaleControlUrl: "https://login.tailscale.com/",
           tailscaleAuthKey: "tskey-auth-kiV8JUTFBc11CNTRL-gE2qNxHwfLKjswzwpJotLKwLrfAm9vkZU",
         });
         cheerpjCreateDisplay(800, 600);
