@@ -10,8 +10,9 @@
     <script>
       (async function () {
         await cheerpjInit({
+          clipboardMode: "permission",
           enableInputMethods: true,
-          tailscaleAuthKey: process.env.TAILSCALE_KEY,
+          tailscaleAuthKey: "__TAILSCALE_KEY__",
           tailscaleIpCb: (ip) => {
             console.log("ip: " + ip);
             let el = document.querySelector("#ip");

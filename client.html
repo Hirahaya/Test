@@ -10,8 +10,9 @@
     <script>
       async function start(ip) {
         await cheerpjInit({
+          clipboardMode: "permission",
           enableInputMethods: true,
-          tailscaleAuthKey: process.env.TAILSCALE_KEY,
+          tailscaleAuthKey: "__TAILSCALE_KEY__",
         });
         cheerpjCreateDisplay(800, 600);
         await cheerpjRunJar("/app/jar/Client.jar", ip);

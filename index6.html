@@ -21,16 +21,15 @@
       await cheerpjInit(
         {
           // logCanvasUpdates: true,
-          // clipboardMode: "permission",
+          clipboardMode: "permission",
           enableInputMethods: true,
           // enableDebug: true,
-          tailscaleAuthKey: process.env.TAILSCALE_KEY,
+          tailscaleAuthKey: "__TAILSCALE_KEY__",
           tailscaleIpCb: function (ip) {
             console.log("IP address " + ip);
           },
         }
       );
-      // cheerpjCreateDisplay(900, 800);
       cheerpjCreateDisplay(-1, -1, document.getElementById("container"));
       await cheerpjRunJar("/app/jar/SwingHTMLBrowser.jar");
     </script>
