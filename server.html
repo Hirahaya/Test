@@ -10,8 +10,9 @@
     <script>
       (async function () {
         await cheerpjInit({
-          tailscaleAuthKey: "kYbQN37h9B11CNTRL",
+          tailscaleAuthKey: "tskey-auth-kzECLQkN6511CNTRL-6VK776nR5MRPMyCcQvVZLRkY6M1cCkGX",
           tailscaleIpCb: (ip) => {
+            console.log("ip: " + ip);
             let el = document.querySelector("#ip");
             el.value = ip;
           },
