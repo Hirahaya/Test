@@ -10,11 +10,11 @@
       (async function () {
         await cheerpjInit(
           {
-            tailscaleControlUrl: "https://login.tailscale.com/",
+            // tailscaleControlUrl: "https://login.tailscale.com/",
             logCanvasUpdates: true,
             clipboardMode: "permission",
             enableInputMethods: true,
-            // enableDebug: true, 
+            enableDebug: true, 
             tailscaleAuthKey: "kYbQN37h9B11CNTRL",
             tailscaleIpCb: function (ip) {
               console.log("IP address " + ip);
