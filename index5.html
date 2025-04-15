@@ -2,15 +2,27 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>CheerpJ test</title>
+    <title>CheerpJ SwingSet3</title>
     <script src="https://cjrtnc.leaningtech.com/3.1/cj3loader.js"></script>
+    <style>
+      html, body {
+        margin: 0;
+      }
+
+      #container {
+        width: 100vw;
+        height: 100svh;
+      }
+    </style>
   </head>
   <body>
+    <div id="container"></div>
     <script>
       (async function () {
         await cheerpjInit();
-        cheerpjCreateDisplay(900, 800);
-        await cheerpjRunJar("/app/Test/jar/SwingSet3.jar");
+        // cheerpjCreateDisplay(900, 800);
+        cheerpjCreateDisplay(-1, -1, document.getElementById("container"));
+        await cheerpjRunJar("/app/jar/SwingSet3.jar");
       })();
     </script>
   </body>
