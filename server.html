@@ -9,10 +9,12 @@
     <input type="text" id="ip"></input>
     <script>
       (async function () {
+        const res = await fetch("/.netlify/functions/key");
+        const { key } = await res.json();
         await cheerpjInit({
           clipboardMode: "permission",
           enableInputMethods: true,
-          tailscaleAuthKey: "__TAILSCALE_KEY__",
+          tailscaleAuthKey: key,
           tailscaleIpCb: (ip) => {
             console.log("ip: " + ip);
             let el = document.querySelector("#ip");

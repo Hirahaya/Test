@@ -1,0 +1,6 @@
+[build]
+  functions = "netlify/functions"
+  publish = "." # HTMLなどの静的コンテンツの場所
+
+[dev]
+  functions = "netlify/functions"

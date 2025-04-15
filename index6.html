@@ -18,13 +18,15 @@
   <body>
     <div id="container"></div>
     <script type="module">
+      const res = await fetch("/.netlify/functions/key");
+      const { key } = await res.json();
       await cheerpjInit(
         {
           // logCanvasUpdates: true,
           clipboardMode: "permission",
           enableInputMethods: true,
           // enableDebug: true,
-          tailscaleAuthKey: "__TAILSCALE_KEY__",
+          tailscaleAuthKey: key,
           tailscaleIpCb: function (ip) {
             console.log("IP address " + ip);
           },
